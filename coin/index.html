@@ -9,11 +9,29 @@
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
     
     <style>
+        body {
+            line-height: 1.2;
+        }
+
         .btn-group-sm>.btn, .btn-sm {
-            padding: .25rem .5rem;
-            font-size: .75rem;
+            padding: 0;
+            font-size: 0.85rem;
             line-height: 1.5;
             border-radius: .2rem;
+        }
+
+        .input-group>.form-control {
+            padding: 0 6px 0;
+            height: 20px;
+            font-size: 0.9rem;
+            width: 150px;
+        }
+
+        .form-control {
+            padding: 0 6px 0;
+            height: 20px;
+            font-size: 0.9rem;
+            width: 150px;
         }
 
         .button-style {
@@ -32,68 +50,97 @@
 <body>
     <div class="row" style="margin-left: 10px; margin-top: 10px">
         <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
-        	<input type="number" id="input" class="form-control" id="name" placeholder="请输入名称"/>
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
-            <br>
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
-            <br>
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
-            <br>
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
+            <div class="input-group">
+                <input class="form-control col-sm-7 col-md-7 col-lg-7 col-xl-7" type="number" id="price01"/>
+                <button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px" onclick="compute('01')">计算</button>
+            </div>
+            <div id="data01"></div>
         </div>
 
         <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
-            <br>
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
-            <br>
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
-            <br>
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
+            <div class="input-group">
+                <input class="form-control col-sm-7 col-md-7 col-lg-7 col-xl-7" type="number" id="price02"/>
+                <button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px" onclick="compute('02')">计算</button>
+            </div>
+            <div id="data02"></div>
         </div>
         
         <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
-            <br>
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
-            <br>
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
-            <br>
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
+            <div class="input-group">
+                <input class="form-control col-sm-7 col-md-7 col-lg-7 col-xl-7" type="number" id="price03"/>
+                <button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px" onclick="compute('03')">计算</button>
+            </div>
+            <div id="data03"></div>
         </div>
 
         <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
-            <br>
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
-            <br>
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
-            <br>
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
+            <div class="input-group">
+                <input class="form-control col-sm-7 col-md-7 col-lg-7 col-xl-7" type="number" id="price04"/>
+                <button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px" onclick="compute('04')">计算</button>
+            </div>
+            <div id="data04"></div>
         </div>
 
         <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
-            <br>
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
-            <br>
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
-            <br>
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
+            <div class="input-group">
+                <input class="form-control col-sm-7 col-md-7 col-lg-7 col-xl-7" type="number" id="price05"/>
+                <button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px" onclick="compute('05')">计算</button>
+            </div>
+            <div id="data05"></div>
         </div>
 
         <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
-            <br>
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
-            <br>
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
-            <br>
-            <button type="button" class="btn btn-sm btn-outline-success button-style">等级1</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">1.0000%</button>
+            <div class="input-group">
+                <input class="form-control col-sm-7 col-md-7 col-lg-7 col-xl-7" type="number" id="price06"/>
+                <button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px" onclick="compute('06')">计算</button>
+            </div>
+            <div id="data06"></div>
         </div>
     </div>
 
     <script type="text/javascript">
+        function compute(index) {
+            var key = "#price"+index;
+            var price = $(key).val();
+            if (price===null || price===undefined || price==='') {
+                alert("请输入数字");
+                $("#price01").attr('value', '');
+                $("#data"+index).html('');
+            } else {
+                var priceNumber = parseFloat(price);
+                var html = '';
+                for (i=15; i>0; i--) {
+                    var sum = priceNumber*i/100+priceNumber;
+                    sum = sum.toFixed(8);
+                    var numberFormat = i<10? '0'+i:i;
+                    html += '<button type="button" class="btn btn-sm btn-outline-success button-style">+'+numberFormat+'%</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">'+sum+'</button><br>';
+                }
+                html += '<br>';
+                for (i=1; i<16; i++) {
+                    var sum = priceNumber-priceNumber*i/100;
+                    sum = sum.toFixed(8);
+                    var numberFormat = i<10? '0'+i:i;
+                    html += '<button type="button" class="btn btn-sm btn-outline-danger button-style">-'+numberFormat+'%</button><button type="button" class="btn btn-sm btn-outline-danger button-style" style="margin-left: 6px;">'+sum+'</button><br>';
+                }
+
+                html += '<br><br>';
+                for (i=50; i>0; i--) {
+                    var sum = priceNumber*i/100+priceNumber;
+                    sum = sum.toFixed(8);
+                    var numberFormat = i<10? '0'+i:i;
+                    html += '<button type="button" class="btn btn-sm btn-outline-success button-style">+'+numberFormat+'%</button><button type="button" class="btn btn-sm btn-outline-success button-style" style="margin-left: 6px;">'+sum+'</button><br>';
+                }
+                html += '<br>';
+                for (i=1; i<51; i++) {
+                    var sum = priceNumber-priceNumber*i/100;
+                    sum = sum.toFixed(8);
+                    var numberFormat = i<10? '0'+i:i;
+                    html += '<button type="button" class="btn btn-sm btn-outline-danger button-style">-'+numberFormat+'%</button><button type="button" class="btn btn-sm btn-outline-danger button-style" style="margin-left: 6px;">'+sum+'</button><br>';
+                }
+
+                $("#data"+index).html(html);
+            }
+        }
     </script>
 </body>
 
